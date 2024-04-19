@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/output.css" />
+    <link rel="shortcut icon" href="Assets/LOGO PNG.png" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Clt Games</title>
+  </head>
+  <body class="bg-main-bg">
+    
+    <header
+      class="flex justify-between items-center h-36 bg-gradient-to-r from-gradiente-header-2 to-gradiente-header-1 shadow-md"
+    >
+      <img src="Assets/LOGO PNG.png" alt="Logo Clt Gaming" class="ml-14" />
+      <div class="flex items-center">
+        <input
+          class="h-[2.3rem] w-[29rem] ml-24 text-center font-normal"
+          type="text"
+          placeholder="Buscar jogos de PC e Console"
+        />
+        <button>
+          <i
+            class="fa-solid fa-magnifying-glass text-white bg-azul-btn px-3 py-[0.6rem] ml-0"
+          ></i>
+        </button>
+      </div>
+      <div class="text-white mr-20 flex gap-12">
+        <a class="font-medium py-2" href="#">Home</a>
+        <a class="font-medium py-2" href="#">Promoções</a>
+        <a class="font-medium py-2" href="#">Contato</a>
+        <button class="ml-14 px-6 py-2 bg-azul-btn font-bold rounded-sm">
+          Entrar
+        </button>
+      </div>
+    </header>
+    <div class="w-full h-[500px] bg-home bg-cover bg-center"></div>
+
+    <section
+      class="flex justify-around items-center bg-text-color h-[5.1rem] bg-azul-bg"
+    >
+      <div class="text-amarelo-dourado font-[490] text-3xl">
+        Ghost of Tsushima DIRECTOR'S CUT
+      </div>
+      <div
+        class="font-extrabold text-3xl bg-gradient-to-r from-gradiente-price-1 to-gradiente-price-2 inline-block text-transparent bg-clip-text"
+      >
+        R$ 199,50
+        <button
+          class="font-medium text-xl text-white bg-azul-btn px-5 py-2 ml-3"
+        >
+          <i class="fa-solid fa-cart-shopping"></i> COMPRAR
+        </button>
+      </div>
+    </section>
+    <div>
+      <hr class="h-3 border-cor-hr">
+    </div>
+
+    <main
+      id="lista-jogos"
+      class="grid grid-cols-1 md:grid-cols-3 gap-16 mx-auto max-w-6xl pt-[120px]"
+    ></main>
+
+    
+
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
