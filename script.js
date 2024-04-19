@@ -1,40 +1,40 @@
 const jogos = [
   {
     preco: "115,00",
-    imagem: "Assets/1.png",
+    imagem: "assets/1.png",
   },
   {
     preco: "59,99",
-    imagem: "Assets/2.png",
+    imagem: "assets/2.png",
   },
   {
     preco: "199,50",
-    imagem: "Assets/3.png",
+    imagem: "assets/3.png",
   },
   {
     preco: "116,61",
-    imagem: "Assets/4.png",
+    imagem: "assets/4.png",
   },
   {
     preco: "249,90",
-    imagem: "Assets/5.png",
+    imagem: "assets/5.png",
   },
   {
     preco: "289,90",
-    imagem: "Assets/6.png",
+    imagem: "assets/6.png",
   },
 
   {
     preco: "189,99",
-    imagem: "Assets/7.png",
+    imagem: "assets/7.png",
   },
   {
     preco: "35,85",
-    imagem: "Assets/8.png",
+    imagem: "assets/8.png",
   },
   {
     preco: "349,99",
-    imagem: "Assets/9.png",
+    imagem: "assets/9.png",
   },
 ];
 
