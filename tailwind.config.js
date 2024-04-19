@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        home: "url('/assets/Ghost2 4k.jpeg')",
+        "bg-home": "url('/assets/Ghost2 4k.jpeg')",
       },
       width: {
         128: "32rem",
