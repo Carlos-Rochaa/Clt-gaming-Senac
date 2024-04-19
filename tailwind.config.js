@@ -3,9 +3,6 @@ module.exports = {
   content: ["./**/*.{html,js}"],
   theme: {
     extend: {
-      backgroundImage: {
-        "bg-home": "url('/assets/Ghost2 4k.jpeg')",
-      },
       width: {
         128: "32rem",
       },
