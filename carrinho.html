@@ -18,7 +18,7 @@
     />
     <title>Clt Gaming</title>
   </head>
-  <body>
+  <body class="bg-main-bg">
     <header
       class="flex justify-between items-center h-36 bg-gradient-to-r from-gradiente-header-2 to-gradiente-header-1 shadow-black"
     >
@@ -57,19 +57,19 @@
           class="w-full h-[700px]"
         />
         <div
-          class="flex flex-col h-[600px] absolute left-0 top-1/2 transform -translate-y-1/2 bg-text-color bg-opacity-90 text-white p-4 items-center justify-center ml-14"
+          class="flex flex-col h-[600px] w-[600px] absolute left-0 bottom-0 bg-text-color bg-opacity-90 text-white p-4 items-center justify-center ml-14"
         >
           <h2 id="jogo-nome" class="text-3xl font-bold mb-2 p-12"></h2>
 
           <div class="flex flex-col p-12">
             <div class="p-4">
-              <input type="radio" id="exp" />
+              <input class="h-5 w-5" type="radio" name="escolha" id="exp" />
               <label for="exp" class="text-2xl font-semibold ml-2"
                 >Experimente gratuitamente</label
               >
             </div>
             <div class="p-4">
-              <input type="radio" id="price" />
+              <input class="h-5 w-5" type="radio" name="escolha" id="price" />
               <label
                 id="jogo-preco"
                 for="price"
@@ -88,6 +88,94 @@
         </div>
       </div>
     </section>
+    <div>
+      <hr class="h-2 border-cor-hr" />
+    </div>
+    <footer class="flex mx-3" style="padding-top: 76px; padding-bottom: 76px">
+      <div class="text-white flex justify-evenly flex-grow">
+        <div class="flex-auto" style="padding-left: 497px">
+          <h1
+            class="font-semibold"
+            style="font-size: 24px; padding-bottom: 22px"
+          >
+            Um lugar para <br />
+            jogadores
+          </h1>
+          <div
+            class="flex flex-col"
+            style="color: rgba(111, 176, 250, 1); font-size: 15px"
+          >
+            <h2>Português do Brasil</h2>
+          </div>
+        </div>
+        <div class="flex-auto">
+          <h1
+            class="font-semibold"
+            style="font-size: 24px; padding-bottom: 57px"
+          >
+            Empresa
+          </h1>
+          <div
+            class="flex flex-col"
+            style="color: rgba(111, 176, 250, 1); font-size: 15px"
+          >
+            <a href="" style="padding-bottom: 27px">Sobre</a>
+            <a href="" style="padding-bottom: 27px">Empregos</a>
+            <a href="" style="padding-bottom: 27px">Marca</a>
+            <a href="" style="padding-bottom: 27px">Sala de Imprensa</a>
+          </div>
+        </div>
+        <div class="flex-auto">
+          <h1
+            class="font-semibold"
+            style="font-size: 24px; padding-bottom: 57px"
+          >
+            Recursos
+          </h1>
+          <div
+            class="flex flex-col"
+            style="color: rgba(111, 176, 250, 1); font-size: 15px"
+          >
+            <a href="" style="padding-bottom: 27px">Suporte</a>
+            <a href="" style="padding-bottom: 27px">Segurança</a>
+            <a href="" style="padding-bottom: 27px">Blog</a>
+            <a href="">Comunidade</a>
+          </div>
+        </div>
+        <div class="flex-auto">
+          <h1
+            class="font-semibold"
+            style="font-size: 24px; padding-bottom: 57px"
+          >
+            Política
+          </h1>
+          <div
+            class="flex flex-col"
+            style="color: rgba(111, 176, 250, 1); font-size: 15px"
+          >
+            <a href="" style="padding-bottom: 27px">Termos</a>
+            <a href="" style="padding-bottom: 27px">Privacidade</a>
+            <a href="" style="padding-bottom: 27px">Cookies</a>
+            <a href="">Moderação</a>
+          </div>
+        </div>
+        <div class="flex-auto" style="padding-right: 497px">
+          <h1
+            class="font-semibold"
+            style="font-size: 24px; padding-bottom: 57px"
+          >
+            Aplicativo
+          </h1>
+          <div
+            class="flex flex-col"
+            style="color: rgba(111, 176, 250, 1); font-size: 15px"
+          >
+            <a href="" style="padding-bottom: 27px">Baixe para Android</a>
+            <a href="">Baixe para IOS</a>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <script>
       const jogoImagem = localStorage.getItem("jogoImagem");

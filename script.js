@@ -15,7 +15,7 @@ const jogos = [
     nome: "Helldivers",
     preco: "199,50",
     imagem: "assets/3.png",
-    imagemCarrinho: "assets/Carrinho Helldivers.jpg",
+    imagemCarrinho: "assets/Carrinho Helldivers.jpeg",
   },
   {
     nome: "Resident Evil 4",
@@ -52,7 +52,7 @@ const jogos = [
     nome: "Star wars - outlaws",
     preco: "349,99",
     imagem: "assets/9.png",
-    imagemCarrinho: "assets/Carrinho Star.jpg",
+    imagemCarrinho: "assets/Carrinho Star.jpeg",
   },
 ];
 
