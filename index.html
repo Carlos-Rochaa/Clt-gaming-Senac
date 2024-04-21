@@ -1,81 +1,109 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styles/output.css" />
-    <link rel="shortcut icon" href="Assets/LOGO PNG.png" type="image/x-icon" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <title>Clt Games</title>
-  </head>
-  <body class="bg-main-bg">
-    <header
-      class="flex justify-between items-center h-36 bg-gradient-to-r from-gradiente-header-2 to-gradiente-header-1 shadow-md"
-    >
-      <img src="assets/LOGO PNG.png" alt="Logo Clt Gaming" class="ml-14" />
-      <div class="flex items-center">
-        <input
-          class="h-[2.3rem] w-[29rem] ml-24 text-center font-normal"
-          type="text"
-          placeholder="Buscar jogos de PC e Console"
-        />
-        <button>
-          <i
-            class="fa-solid fa-magnifying-glass text-white bg-azul-btn px-3 py-[0.6rem] ml-0"
-          ></i>
-        </button>
-      </div>
-      <div class="text-white mr-20 flex gap-12">
-        <a class="font-medium py-2" href="#">Home</a>
-        <a class="font-medium py-2" href="#">Promoções</a>
-        <a class="font-medium py-2" href="#">Contato</a>
-        <button class="ml-14 px-6 py-2 bg-azul-btn font-bold rounded-sm">
-          Entrar
-        </button>
-      </div>
-    </header>
-    <img
-      src="assets/Ghost2 4K.jpeg"
-      alt="Ghost"
-      class="w-full h-[500px] bg-cover bg-center"
-    />
 
-    <section
-      class="flex justify-around items-center bg-text-color h-[5.1rem] bg-azul-bg"
-    >
-      <div class="text-amarelo-dourado font-[490] text-3xl">
-        Ghost of Tsushima DIRECTOR'S CUT
-      </div>
-      <div
-        class="font-extrabold text-3xl bg-gradient-to-r from-gradiente-price-1 to-gradiente-price-2 inline-block text-transparent bg-clip-text"
-      >
-        R$ 199,50
-        <button
-          class="font-medium text-xl text-white bg-azul-btn px-5 py-2 ml-3"
-        >
-          <i class="fa-solid fa-cart-shopping"></i> COMPRAR
-        </button>
-      </div>
-    </section>
-    <div>
-      <hr class="h-3 border-cor-hr" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/styles/output.css" />
+  <link rel="shortcut icon" href="Assets/LOGO PNG.png" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Clt Games</title>
+</head>
+
+<body class="bg-main-bg">
+  <header
+    class="flex justify-between items-center h-36 bg-gradient-to-r from-gradiente-header-2 to-gradiente-header-1 shadow-md">
+    <img src="assets/LOGO PNG.png" alt="Logo Clt Gaming" class="ml-14" />
+    <div class="flex items-center">
+      <input class="h-[2.3rem] w-[29rem] ml-24 text-center font-normal" type="text"
+        placeholder="Buscar jogos de PC e Console" />
+      <button>
+        <i class="fa-solid fa-magnifying-glass text-white bg-azul-btn px-3 py-[0.6rem] ml-0"></i>
+      </button>
     </div>
+    <div class="text-white mr-20 flex gap-12">
+      <a class="font-medium py-2" href="#">Home</a>
+      <a class="font-medium py-2" href="#">Promoções</a>
+      <a class="font-medium py-2" href="#">Contato</a>
+      <button class="ml-14 px-6 py-2 bg-azul-btn font-bold rounded-sm">
+        Entrar
+      </button>
+    </div>
+  </header>
+  <img src="assets/Ghost2 4K.jpeg" alt="Ghost" class="w-full h-[500px] bg-cover bg-center" />
 
-    <main
-      id="lista-jogos"
-      class="grid grid-cols-1 md:grid-cols-3 gap-16 mx-auto max-w-6xl pt-[120px]"
-    ></main>
+  <section class="flex justify-around items-center bg-text-color h-[5.1rem] bg-azul-bg">
+    <div class="text-amarelo-dourado font-[490] text-3xl">
+      Ghost of Tsushima DIRECTOR'S CUT
+    </div>
+    <div
+      class="font-extrabold text-3xl bg-gradient-to-r from-gradiente-price-1 to-gradiente-price-2 inline-block text-transparent bg-clip-text">
+      R$ 199,50
+      <button class="font-medium text-xl text-white bg-azul-btn px-5 py-2 ml-3">
+        <i class="fa-solid fa-cart-shopping"></i> COMPRAR
+      </button>
+    </div>
+  </section>
+  <div>
+    <hr class="h-3 border-cor-hr" />
+  </div>
 
-    <script src="script.js"></script>
-  </body>
+  <main id="lista-jogos" class="grid grid-cols-1 md:grid-cols-3 gap-16 mx-auto max-w-6xl pt-[120px]"></main>
+
+  <script src="script.js"></script>
+
+  <div class="pt-9">
+    <hr class="h-3 border-cor-hr" style="padding-top: 76px;" />
+  </div>
+
+  <footer class="flex mx-3">
+    <div class="text-white flex justify-evenly flex-grow" style="padding-bottom: 76px;">
+      <div class="flex-auto" style="margin-left: 497px;">
+        <h1 class="text-3xl font-semibold" style="padding-bottom: 22px; font-size: 24px;">Um lugar para <br> jogadores
+        </h1>
+        <div class="flex flex-col" style="font-size: 15px; color: rgba(111, 176, 250, 1);">
+          <h2>Português do Brasil</h2>
+        </div>
+      </div>
+      <div class="flex-auto">
+        <h1 class="font-semibold  font-sans" style="padding-bottom: 57px; font-size: 24px;">Empresa</h1>
+        <div class="flex flex-col" style="font-size: 15px; color: rgba(111, 176, 250, 1);">
+          <a href="" style="padding-bottom: 27px;">Sobre</a>
+          <a href="" style="padding-bottom: 27px;">Empregos</a>
+          <a href="" style="padding-bottom: 27px;">Marca</a>
+          <a href="" style="padding-bottom: 27px;">Sala de Imprensa</a>
+        </div>
+      </div>
+      <div class="flex-auto">
+        <h1 class="font-semibold font-sans" style="padding-bottom: 57px; font-size: 24px;">Recursos</h1>
+        <div class="flex flex-col" style="font-size: 15px; color: rgba(111, 176, 250, 1);">
+          <a class="" style="padding-bottom: 27px;" href="">Suporte</a>
+          <a href="" style="padding-bottom: 27px;">Segurança</a>
+          <a href="" style="padding-bottom: 27px;">Blog</a>
+          <a href="" style="padding-bottom: 27px;">Comunidade</a>
+        </div>
+      </div>
+      <div class="flex-auto">
+        <h1 class="font-semibold font-sans" style="padding-bottom: 57px; font-size: 24px;">Política</h1>
+        <div class=" flex flex-col" style="font-size: 15px; color: rgba(111, 176, 250, 1);">
+          <a href="" style="padding-bottom: 27px;">Termos</a>
+          <a href="" style="padding-bottom: 27px;">Privacidade</a>
+          <a href="" style="padding-bottom: 27px;">Cookies</a>
+          <a href="" style="padding-bottom: 27px;">Moderação</a>
+        </div>
+      </div>
+      <div class="flex-auto" style="margin-right: 497px;">
+        <h1 class="font-semibold mfont-sans" style="padding-bottom: 57px; font-size: 24px;">Aplicativo</h1>
+        <div class="flex flex-col" style="font-size: 15px; color: rgba(111, 176, 250, 1);">
+          <a href="" style="padding-bottom: 27px;">Baixe para Android</a>
+          <a href="" style="padding-bottom: 27px;">Baixe para IOS</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
 </html>
