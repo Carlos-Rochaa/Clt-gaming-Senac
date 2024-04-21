@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/output.css" />
+    <link rel="shortcut icon" href="Assets/LOGO PNG.png" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Clt Gaming</title>
+  </head>
+  <body>
+    <header
+      class="flex justify-between items-center h-36 bg-gradient-to-r from-gradiente-header-2 to-gradiente-header-1 shadow-black"
+    >
+      <a href="index.html"
+        ><img src="assets/LOGO PNG.png" alt="Logo Clt Gaming" class="ml-14"
+      /></a>
+
+      <div class="flex items-center">
+        <input
+          class="h-[2.3rem] w-[29rem] ml-24 text-center font-normal"
+          type="text"
+          placeholder="Buscar jogos de PC e Console"
+        />
+        <button>
+          <i
+            class="fa-solid fa-magnifying-glass text-white bg-azul-btn px-3 py-[0.6rem] ml-0"
+          ></i>
+        </button>
+      </div>
+      <div class="text-white mr-20 flex gap-12">
+        <a class="font-medium py-2" href="#">Home</a>
+        <a class="font-medium py-2" href="#">Promoções</a>
+        <a class="font-medium py-2" href="#">Contato</a>
+        <button class="ml-14 px-6 py-2 bg-azul-btn font-bold rounded-sm">
+          Entrar
+        </button>
+      </div>
+    </header>
+
+    <section>
+      <div id="jogo-selecionado" class="relative">
+        <img
+          id="jogo-imagem"
+          src=""
+          alt="Imagem do jogo"
+          class="w-full h-[700px]"
+        />
+        <div
+          class="flex flex-col h-[600px] absolute left-0 top-1/2 transform -translate-y-1/2 bg-text-color bg-opacity-90 text-white p-4 items-center justify-center ml-14"
+        >
+          <h2 id="jogo-nome" class="text-3xl font-bold mb-2 p-12"></h2>
+
+          <div class="flex flex-col p-12">
+            <div class="p-4">
+              <input type="radio" id="exp" />
+              <label for="exp" class="text-2xl font-semibold ml-2"
+                >Experimente gratuitamente</label
+              >
+            </div>
+            <div class="p-4">
+              <input type="radio" id="price" />
+              <label
+                id="jogo-preco"
+                for="price"
+                class="text-2xl font-semibold ml-2"
+                >s</label
+              >
+            </div>
+          </div>
+
+          <button
+            id="botao-comprar"
+            class="font-medium text-xl text-white bg-azul-btn px-5 py-2 mt-4 items-center rounded-md"
+          >
+            Adicionar ao carrinho
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const jogoImagem = localStorage.getItem("jogoImagem");
+      const jogoPreco = localStorage.getItem("jogoPreco");
+      const jogoNome = localStorage.getItem("jogoNome");
+
+      if (jogoImagem && jogoPreco) {
+        document.getElementById("jogo-imagem").src = jogoImagem;
+        document.getElementById("jogo-preco").textContent = `R$ ${jogoPreco}`;
+        document.getElementById("jogo-nome").textContent = jogoNome;
+      }
+    </script>
+  </body>
+</html>
