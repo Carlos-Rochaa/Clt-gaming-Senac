@@ -9,42 +9,50 @@ const jogos = [
     nome: "Planet of Lana",
     preco: "59,99",
     imagem: "assets/2.png",
+    imagemCarrinho: "assets/Carrinho Planet.jpg",
   },
   {
     nome: "Helldivers",
     preco: "199,50",
     imagem: "assets/3.png",
+    imagemCarrinho: "assets/Carrinho Helldivers.jpg",
   },
   {
     nome: "Resident Evil 4",
     preco: "116,61",
     imagem: "assets/4.png",
+    imagemCarrinho: "assets/Carrinho Resident.jpg",
   },
   {
     nome: "Horizon Forbidden West",
     preco: "249,90",
     imagem: "assets/5.png",
+    imagemCarrinho: "assets/Carrinho Horizon.jpg",
   },
   {
     nome: "Red dead redemption II",
     preco: "289,90",
     imagem: "assets/6.png",
+    imagemCarrinho: "assets/Carrinho Red dead.jpg",
   },
 
   {
     nome: "Destiny 2 - The final shape",
     preco: "189,99",
     imagem: "assets/7.png",
+    imagemCarrinho: "assets/Carrinho Destiny.jpg",
   },
   {
     nome: "Grand theft auto - GTA V",
     preco: "35,85",
     imagem: "assets/8.png",
+    imagemCarrinho: "assets/Carrinho gta.jpg",
   },
   {
     nome: "Star wars - outlaws",
     preco: "349,99",
     imagem: "assets/9.png",
+    imagemCarrinho: "assets/Carrinho Star.jpg",
   },
 ];
 
