@@ -19,12 +19,11 @@ module.exports = {
         "text-color": "#080D21",
         "amarelo-dourado": "#D4C089",
         "gradiente-price-1": "#6559f9",
+        "gradiente-price-2": "#6FB0FA",
         "cor-hr": "#801CFF",
-        "cards": "#3B1E7A",
+        cards: "#3B1E7A",
       },
     },
   },
-  plugins: [
-
-  ],
+  plugins: [],
 };
