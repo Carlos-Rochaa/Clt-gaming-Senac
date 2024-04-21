@@ -16,8 +16,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
-    
     <title>Clt Gaming</title>
   </head>
   <body class="bg-main-bg">
@@ -66,14 +64,20 @@
           <div class="flex flex-col p-12">
             <div class="p-4">
               <input class="h-5 w-5" type="radio" name="escolha" id="exp" />
-              <label for="exp" class="text-2xl font-semibold ml-2">Experimente gratuitamente</label>
+              <label for="exp" class="text-2xl font-semibold ml-2"
+                >Experimente gratuitamente</label
+              >
             </div>
             <div class="p-4">
               <input class="h-5 w-5" type="radio" name="escolha" id="price" />
-              <label for="price" class="text-2xl font-semibold ml-2">Preço</label>
+              <label
+                id="jogo-preco"
+                for="price"
+                class="text-2xl font-semibold ml-2"
+                >s</label
+              >
             </div>
           </div>
-          
 
           <button
             id="botao-comprar"
@@ -85,10 +89,10 @@
       </div>
     </section>
     <div>
-      <hr class="h-1 border-cor-hr" />
+      <hr class="h-2 border-cor-hr" />
     </div>
-    <footer class="flex bg-text-color" >
-      <div class="text-white flex justify-evenly flex-grow mx-3" style="padding-top: 76px; padding-bottom: 76px">
+    <footer class="flex mx-3" style="padding-top: 76px; padding-bottom: 76px">
+      <div class="text-white flex justify-evenly flex-grow">
         <div class="flex-auto" style="padding-left: 497px">
           <h1
             class="font-semibold"
@@ -183,7 +187,6 @@
         document.getElementById("jogo-preco").textContent = `R$ ${jogoPreco}`;
         document.getElementById("jogo-nome").textContent = jogoNome;
       }
-
     </script>
   </body>
 </html>

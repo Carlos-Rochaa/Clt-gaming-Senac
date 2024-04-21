@@ -81,4 +81,3 @@ function adicionarAoCarrinho(imagemCarrinho, preco, nome) {
   localStorage.setItem("jogoNome", nome);
   window.location.href = "carrinho.html";
 }
-
