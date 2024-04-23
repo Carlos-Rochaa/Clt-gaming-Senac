@@ -81,3 +81,77 @@ function adicionarAoCarrinho(imagemCarrinho, preco, nome) {
   localStorage.setItem("jogoNome", nome);
   window.location.href = "carrinho.html";
 }
+
+const jogosDestaque = [
+  {
+    nome: "Ghost of Tshushima - Directors cut",
+    preco: "199,50",
+    imagem: "assets/Ghost2 4K.jpeg",
+    imagemCarrinho: "assets/Ghost 4K.jpeg",
+  },
+  {
+    nome: "Sekiro shadows die twice",
+    preco: "149,50",
+    imagem: "assets/Sekiro 4k.jpg",
+    imagemCarrinho: "assets/Sekiro 4k.jpg",
+  },
+  {
+    nome: "Elden Ring",
+    preco: "249,99",
+    imagem: "assets/Elden 4k.jpg",
+    imagemCarrinho: "assets/Elden Ring 4k.png",
+  },
+];
+
+const slidesContainer = document.getElementById("slides-container");
+
+jogosDestaque.forEach((jogo) => {
+  const slide = document.createElement("div");
+  slide.classList.add("w-full", "flex-shrink-0");
+
+  const content = `
+    <div class="relative h-[501px]">
+      <img src="${jogo.imagem}" alt="${jogo.nome}" class="w-full h-full bg-center">
+      <div class="absolute bottom-0 left-0 right-0 bg-text-color p-4 flex justify-around gap-48">
+        <div class="text-amarelo-dourado font-[490] text-3xl">${jogo.nome}</div>
+        <div class="flex items-center">
+          <div class="font-extrabold text-3xl bg-gradient-to-r from-gradiente-price-1 to-gradiente-price-2 inline-block text-transparent bg-clip-text">${jogo.preco}</div>
+          <button
+            class="font-medium text-xl text-white hover:text-zinc-400 bg-azul-btn px-5 py-2 ml-3"
+            onclick="adicionarAoCarrinho('${jogo.imagemCarrinho}', '${jogo.preco}', '${jogo.nome}')"
+          >
+            <i class="fa-solid fa-cart-shopping"></i> COMPRAR
+          </button>
+        </div>
+      </div>
+    </div>
+  `;
+
+  slide.innerHTML = content;
+  slidesContainer.appendChild(slide);
+});
+
+let currentIndex = 0;
+
+function showSlide(index) {
+  if (index < 0) {
+    index = jogosDestaque.length - 1;
+  } else if (index >= jogosDestaque.length) {
+    index = 0;
+  }
+
+  const translateValue = -index * 100;
+  slidesContainer.style.transform = `translateX(${translateValue}%)`;
+  currentIndex = index;
+}
+
+function nextSlide() {
+  showSlide(currentIndex + 1);
+}
+
+function prevSlide() {
+  showSlide(currentIndex - 1);
+}
+
+setInterval(nextSlide, 5000);
+showSlide(currentIndex);

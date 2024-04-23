@@ -35,42 +35,28 @@
           ></i>
         </button>
       </div>
-      <div class="text-white  mr-20 flex gap-12">
+      <div class="text-white mr-20 flex gap-12">
         <a class="font-medium py-2 hover:text-zinc-400" href="#">Home</a>
         <a class="font-medium py-2 hover:text-zinc-400" href="#">Promoções</a>
         <a class="font-medium py-2 hover:text-zinc-400" href="#">Contato</a>
-        <button class="ml-14 px-6 py-2 bg-azul-btn font-bold rounded-sm hover:text-zinc-400">
+        <button
+          class="ml-14 px-6 py-2 bg-azul-btn font-bold rounded-sm hover:text-zinc-400"
+        >
           Entrar
         </button>
       </div>
     </header>
-    <img
-      src="assets/Ghost2 4K.jpeg"
-      alt="Ghost"
-      class="w-full h-[500px] bg-cover bg-center"
-    />
-
-    <section
-      class="flex justify-around items-center bg-text-color h-[5.1rem] bg-azul-bg"
-    >
-      <div class="text-amarelo-dourado font-[490] text-3xl">
-        Ghost of Tsushima DIRECTOR'S CUT
+    <div class="w-full">
+      <div class="mx-auto">
+        <div id="slider" class="relative overflow-hidden h-[501px]">
+          <div
+            id="slides-container"
+            class="relative flex transition-transform ease-in-out duration-700"
+          ></div>
       </div>
-      <div
-        class="font-extrabold text-3xl bg-gradient-to-r from-gradiente-price-1 to-gradiente-price-2 inline-block text-transparent bg-clip-text"
-      >
-        R$ 199,50
-        <button
-          id="comprar-destaque"
-          class="font-medium text-xl text-white hover:text-zinc-400 bg-azul-btn px-5 py-2 ml-3"
-          onclick="adicionarAoCarrinho('assets/Ghost2 4K.jpeg', '199,50', 'Ghost of Tsushima - Directors cut')"
-        >
-          <i class="fa-solid fa-cart-shopping"></i> COMPRAR
-        </button>
-      </div>
-    </section>
+    </div>
     <div>
-      <hr class="h-3 border-cor-hr" style="width: 90%; margin: 0 auto;" />
+      <hr class="h-3 border-cor-hr" style="width: 90%; margin: 0 auto" />
     </div>
 
     <main
@@ -95,10 +81,13 @@
     </div>
     <div>
       <div style="padding-top: 27px">
-        <hr class="h-1 border-cor-hr" style="width: 90%; margin: 0 auto;" />
+        <hr class="h-1 border-cor-hr" style="width: 90%; margin: 0 auto" />
       </div>
     </div>
-    <footer class="flex  bg-text-color" style="padding-top: 76px; padding-bottom: 76px " >
+    <footer
+      class="flex bg-text-color"
+      style="padding-top: 76px; padding-bottom: 76px"
+    >
       <div class="text-white flex justify-evenly flex-grow">
         <div class="flex-auto" style="padding-left: 497px">
           <h1
