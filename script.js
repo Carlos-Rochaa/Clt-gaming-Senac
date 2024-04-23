@@ -61,8 +61,8 @@ function criarCardJogo(jogo) {
   <div class="flex flex-wrap items-center border-8 border-cards">
       <img src="${jogo.imagem}" alt="Imagem do jogo" class="w-full">
       <div class="flex w-full bg-cards">
-        <button onclick="adicionarAoCarrinho('${jogo.imagemCarrinho}', '${jogo.preco}', '${jogo.nome}')" class="text-white bg-azul-btn font-semibold flex-1 mr-[0.3rem] p-[0.3rem]">COMPRAR</button>
-        <button class="text-white bg-azul-btn font-normal flex-1">R$ ${jogo.preco}</button>
+        <button onclick="adicionarAoCarrinho('${jogo.imagemCarrinho}', '${jogo.preco}', '${jogo.nome}')" class="text-white hover:text-zinc-400 bg-azul-btn font-semibold flex-1 mr-[0.3rem] p-[0.3rem]">COMPRAR</button>
+        <button class="text-white cursor-text bg-azul-btn font-normal flex-1">R$ ${jogo.preco}</button>
       </div>
     </div>
   `;
