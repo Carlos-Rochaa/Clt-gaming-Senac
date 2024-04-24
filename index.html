@@ -46,15 +46,60 @@
         </button>
       </div>
     </header>
-    <div class="w-full">
-      <div class="mx-auto">
-        <div id="slider" class="relative overflow-hidden h-[501px]">
+    <section>
+      <div class="w-full">
+        <div class="mx-auto relative">
+          <div id="slider" class="overflow-hidden h-[501px] relative">
+            <div
+              id="slides-container"
+              class="relative flex transition-transform ease-in-out duration-700"
+            ></div>
+            <button
+              id="prevBtn"
+              class="absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-10 bg-gray-800 text-white w-10 h-10 flex items-center justify-center rounded-full opacity-50 hover:opacity-100 transition-opacity"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 19l-7-7 7-7"
+                ></path>
+              </svg>
+            </button>
+            <button
+              id="nextBtn"
+              class="absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-10 bg-gray-800 text-white w-10 h-10 flex items-center justify-center rounded-full opacity-50 hover:opacity-100 transition-opacity"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+            </button>
+          </div>
           <div
-            id="slides-container"
-            class="relative flex transition-transform ease-in-out duration-700"
+            id="carousel-indicators"
+            class="absolute bottom-4 flex justify-center w-full gap-2"
           ></div>
+        </div>
       </div>
-    </div>
+    </section>
     <div>
       <hr class="h-3 border-cor-hr" style="width: 90%; margin: 0 auto" />
     </div>

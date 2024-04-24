@@ -82,6 +82,7 @@ function adicionarAoCarrinho(imagemCarrinho, preco, nome) {
   window.location.href = "carrinho.html";
 }
 
+
 const jogosDestaque = [
   {
     nome: "Ghost of Tshushima - Directors cut",
@@ -104,8 +105,11 @@ const jogosDestaque = [
 ];
 
 const slidesContainer = document.getElementById("slides-container");
+const carouselIndicators = document.getElementById("carousel-indicators");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
 
-jogosDestaque.forEach((jogo) => {
+jogosDestaque.forEach((jogo, index) => {
   const slide = document.createElement("div");
   slide.classList.add("w-full", "flex-shrink-0");
 
@@ -129,6 +133,14 @@ jogosDestaque.forEach((jogo) => {
 
   slide.innerHTML = content;
   slidesContainer.appendChild(slide);
+
+  const indicator = document.createElement("button");
+  indicator.classList.add("w-4", "h-4", "rounded-full", "bg-gray-300");
+  indicator.setAttribute("data-index", index);
+  indicator.addEventListener("click", () => {
+    showSlide(index);
+  });
+  carouselIndicators.appendChild(indicator);
 });
 
 let currentIndex = 0;
@@ -143,6 +155,18 @@ function showSlide(index) {
   const translateValue = -index * 100;
   slidesContainer.style.transform = `translateX(${translateValue}%)`;
   currentIndex = index;
+  updateIndicators();
+}
+
+function updateIndicators() {
+  const indicators = carouselIndicators.querySelectorAll("button");
+  indicators.forEach((indicator, index) => {
+    if (index === currentIndex) {
+      indicator.classList.add("bg-gray-800");
+    } else {
+      indicator.classList.remove("bg-gray-800");
+    }
+  });
 }
 
 function nextSlide() {
@@ -153,5 +177,8 @@ function prevSlide() {
   showSlide(currentIndex - 1);
 }
 
-setInterval(nextSlide, 3000);
+nextBtn.addEventListener("click", nextSlide);
+prevBtn.addEventListener("click", prevSlide);
+
+setInterval(nextSlide, 7000);
 showSlide(currentIndex);
