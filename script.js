@@ -175,9 +175,9 @@ function updateIndicators() {
   const indicators = carouselIndicators.querySelectorAll("button");
   indicators.forEach((indicator, index) => {
     if (index === currentIndex) {
-      indicator.classList.add("bg-gradiente-price-2");
+      indicator.classList.add("bg-gradiente-price-1");
     } else {
-      indicator.classList.remove("bg-gradiente-price-2");
+      indicator.classList.remove("bg-gradiente-price-1");
     }
   });
 }
