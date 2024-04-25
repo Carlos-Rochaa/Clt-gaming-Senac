@@ -4,36 +4,42 @@ const jogos = [
     preco: "115,00",
     imagem: "assets/1.png",
     imagemCarrinho: "assets/Carrinho Assassins.jpg",
+    publicadora: "Ubisoft"
   },
   {
     nome: "Planet of Lana",
     preco: "59,99",
     imagem: "assets/2.png",
     imagemCarrinho: "assets/Carrinho Planet.jpg",
+    publicadora: "Wishfully Studios"
   },
   {
     nome: "Helldivers",
     preco: "199,50",
     imagem: "assets/3.png",
     imagemCarrinho: "assets/Carrinho Helldivers.jpeg",
+    publicadora: "Arrowhead Game Studios"
   },
   {
     nome: "Resident Evil 4",
     preco: "116,61",
     imagem: "assets/4.png",
     imagemCarrinho: "assets/Carrinho Resident.jpg",
+    publicadora: "Capcom"
   },
   {
     nome: "Horizon Forbidden West",
     preco: "249,90",
     imagem: "assets/5.png",
     imagemCarrinho: "assets/Carrinho Horizon.jpg",
+    publicadora: "Guerrilla Games"
   },
   {
     nome: "Red dead redemption II",
     preco: "289,90",
     imagem: "assets/6.png",
     imagemCarrinho: "assets/Carrinho Red dead.jpg",
+    publicadora: "Rockstar Games"
   },
 
   {
@@ -41,18 +47,21 @@ const jogos = [
     preco: "189,99",
     imagem: "assets/7.png",
     imagemCarrinho: "assets/Carrinho Destiny.jpg",
+    publicadora: "Bungie"
   },
   {
     nome: "Grand theft auto - GTA V",
     preco: "35,85",
     imagem: "assets/8.png",
     imagemCarrinho: "assets/Carrinho gta.jpg",
+    publicadora: "Rockstar Games"
   },
   {
     nome: "Star wars - outlaws",
     preco: "349,99",
     imagem: "assets/9.png",
     imagemCarrinho: "assets/Carrinho Star.jpeg",
+    publicadora: "Lucasfilm Games"
   },
 ];
 
@@ -61,7 +70,7 @@ function criarCardJogo(jogo) {
   <div class="flex flex-wrap items-center border-8 border-cards">
       <img src="${jogo.imagem}" alt="Imagem do jogo" class="w-full">
       <div class="flex w-full bg-cards">
-        <button onclick="adicionarAoCarrinho('${jogo.imagemCarrinho}', '${jogo.preco}', '${jogo.nome}')" class="text-white hover:text-zinc-400 bg-azul-btn font-semibold flex-1 mr-[0.3rem] p-[0.3rem]">COMPRAR</button>
+        <button onclick="adicionarAoCarrinho('${jogo.imagemCarrinho}', '${jogo.preco}', '${jogo.nome}', '${jogo.publicadora}')" class="text-white hover:text-zinc-400 bg-azul-btn font-semibold flex-1 mr-[0.3rem] p-[0.3rem]">COMPRAR</button>
         <button class="text-white cursor-text bg-azul-btn font-normal flex-1">R$ ${jogo.preco}</button>
       </div>
     </div>
@@ -75,32 +84,36 @@ jogos.forEach((jogo) => {
   main.innerHTML += cardJogo;
 });
 
-function adicionarAoCarrinho(imagemCarrinho, preco, nome) {
+function adicionarAoCarrinho(imagemCarrinho, preco, nome, publicadora) {
   localStorage.setItem("jogoImagem", imagemCarrinho);
   localStorage.setItem("jogoPreco", preco);
   localStorage.setItem("jogoNome", nome);
+  localStorage.setItem("jogoPublicadora", publicadora)
   window.location.href = "carrinho.html";
 }
 
 
 const jogosDestaque = [
   {
-    nome: "Ghost of Tshushima - Directors cut",
+    nome: "Ghost of Tshushima",
     preco: "199,50",
     imagem: "assets/Ghost2 4K.jpeg",
-    imagemCarrinho: "assets/Ghost 4K.jpeg",
+    imagemCarrinho: "assets/Ghost-of-Tsushima.jpg",
+    publicadora: "Sony Interactive Entertainment"
   },
   {
     nome: "Sekiro shadows die twice",
     preco: "149,50",
     imagem: "assets/Sekiro 4k.jpg",
     imagemCarrinho: "assets/Sekiro 4k.jpg",
+    publicadora: "FromSoftware"
   },
   {
     nome: "Elden Ring",
     preco: "249,99",
     imagem: "assets/Elden 4k.jpg",
-    imagemCarrinho: "assets/Elden Ring 4k.png",
+    imagemCarrinho: "assets/elden ring 04.jpg",
+    publicadora: "Bandai Namco Entertainment"
   },
 ];
 
@@ -122,7 +135,7 @@ jogosDestaque.forEach((jogo, index) => {
           <div class="font-extrabold text-3xl bg-gradient-to-r from-gradiente-price-1 to-gradiente-price-2 inline-block text-transparent bg-clip-text">${jogo.preco}</div>
           <button
             class="font-medium text-xl text-white hover:text-zinc-400 bg-azul-btn px-5 py-2 ml-3"
-            onclick="adicionarAoCarrinho('${jogo.imagemCarrinho}', '${jogo.preco}', '${jogo.nome}')"
+            onclick="adicionarAoCarrinho('${jogo.imagemCarrinho}', '${jogo.preco}', '${jogo.nome}', '${jogo.publicadora}')"
           >
             <i class="fa-solid fa-cart-shopping"></i> COMPRAR
           </button>

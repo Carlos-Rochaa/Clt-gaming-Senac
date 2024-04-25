@@ -22,6 +22,7 @@ module.exports = {
         "gradiente-price-2": "#6FB0FA",
         "cor-hr": "#801CFF",
         cards: "#3B1E7A",
+        "carrinho-div": "#313E66"
       },
     },
   },

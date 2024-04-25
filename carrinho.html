@@ -48,49 +48,71 @@
       </div>
     </header>
 
-    <section>
-      <div id="jogo-selecionado" class="relative">
-        <img
-          id="jogo-imagem"
-          src=""
-          alt="Imagem do jogo"
-          class="w-full h-[700px]"
-        />
-        <div
-          class="flex flex-col h-[600px] w-[600px] absolute left-0 bottom-0 bg-text-color bg-opacity-90 text-white p-4 items-center justify-center ml-[85px]"
-        >
-          <h2 id="jogo-nome" class="text-3xl font-bold mb-2 p-12"></h2>
 
-          <div class="flex flex-col p-12">
-            <div class="p-4">
-              <input class="h-5 w-5" type="radio" name="escolha" id="exp" />
-              <label for="exp" class="text-2xl font-semibold ml-2"
-                >Experimente gratuitamente</label
-              >
+
+    <section class="relative">
+      <img
+        id="jogo-imagem"
+        src=""
+        alt="Imagem do jogo"
+        class="w-full h-[700px]"
+      />
+      <div
+        class="flex flex-col h-[600px] w-[600px] absolute left-0 bottom-0 bg-text-color bg-opacity-90 text-white p-4 items-center justify-center ml-[85px]"
+      >
+        <h2 id="jogo-nome" class="text-[48px] font-[600] mb-2 pb-4 bg-gradient-to-r from-gradiente-price-1 to-gradiente-price-2 inline-block text-transparent bg-clip-text"></h2>
+        <h2 id="jogo-publicadora" class="text-[16px] font-[600]"></h2>
+    
+        <div class="flex flex-col p-12">
+          <div class="flex justify-between items-center mb-4">
+
+            
+            <div>
+              <h2 class="font-[700]">Quantidade</h2>
             </div>
-            <div class="p-4">
-              <input class="h-5 w-5" type="radio" name="escolha" id="price" />
-              <label
-                id="jogo-preco"
-                for="price"
-                class="text-2xl font-semibold ml-2"
-                >s</label
-              >
+            <div class="flex items-center">
+              <button class=" py-1  text-4xl" id="decrementar">-</button>
+              <span id="quantidade" class="px-4 text-[24px] font-[600]">1</span>
+              <button class=" py-1  text-4xl" id="incrementar">+</button>
             </div>
           </div>
-
-          <button
-            id="botao-comprar"
-            class="font-medium text-xl text-white hover:text-zinc-400 bg-azul-btn px-5 py-2 mt-4 items-center rounded-md"
-          >
-            Adicionar ao carrinho
-          </button>
+    
+          <div class="flex justify-between mb-4">
+            <div>
+              <h2 class="font-[700]">Valor unitário</h2>
+            </div>
+            <div id="jogo-preco" class="text-[24px] font-[600]"></div>
+          </div>
+    
+          <div class="w-[400px]">
+            <hr style="border-top: 3px dotted #6559F9;">
+          </div>
+    
+          <div class="flex justify-between">
+            <div>
+              <h1 class="font-[700] text-[24px]">Total</h1>
+            </div>
+            <div id="valor-total" class="font-[700] text-[36px] bg-gradient-to-r from-gradiente-price-1 to-gradiente-price-2 inline-block text-transparent bg-clip-text"></div>
+          </div>
         </div>
+    
+        <button
+          id="botao-comprar"
+          class="font-medium text-xl text-white hover:text-zinc-400 bg-azul-btn px-5 py-2 mt-4 items-center rounded-md"
+        >
+          Comprar
+        </button>
       </div>
     </section>
+
+
+
+
     <div>
       <hr class="h-1 border-cor-hr" style="width: 90%; margin: 0 auto" />
     </div>
+
+
     <footer
       class="flex bg-text-color"
       style="padding-top: 76px; padding-bottom: 76px"
@@ -181,15 +203,63 @@
     </footer>
 
     <script>
-      const jogoImagem = localStorage.getItem("jogoImagem");
-      const jogoPreco = localStorage.getItem("jogoPreco");
-      const jogoNome = localStorage.getItem("jogoNome");
+     const jogoImagem = localStorage.getItem("jogoImagem");
+  const jogoPreco = parseFloat(localStorage.getItem("jogoPreco").replace(",", "."));
+  const jogoNome = localStorage.getItem("jogoNome");
+  const jogoPublicadora = localStorage.getItem("jogoPublicadora");
 
-      if (jogoImagem && jogoPreco) {
-        document.getElementById("jogo-imagem").src = jogoImagem;
-        document.getElementById("jogo-preco").textContent = `R$ ${jogoPreco}`;
-        document.getElementById("jogo-nome").textContent = jogoNome;
+  if (jogoImagem && jogoPreco) {
+    document.getElementById("jogo-imagem").src = jogoImagem;
+    document.getElementById("jogo-preco").textContent = `R$ ${jogoPreco.toFixed(2).replace(".", ",")}`;
+    document.getElementById("jogo-nome").textContent = jogoNome;
+    document.getElementById("jogo-publicadora").textContent = jogoPublicadora;
+
+    const valorUnitario = document.getElementById("jogo-preco");
+    valorUnitario.textContent = `R$ ${jogoPreco.toFixed(2).replace(".", ",")}`;
+
+    const quantidade = document.getElementById("quantidade");
+    const incrementar = document.getElementById("incrementar");
+    const decrementar = document.getElementById("decrementar");
+    const valorTotal = document.getElementById("valor-total");
+
+    let quantidadeEscolhida = 1;
+
+    incrementar.addEventListener("click", () => {
+      quantidadeEscolhida++;
+      quantidade.textContent = quantidadeEscolhida;
+      valorTotal.textContent = `R$ ${(jogoPreco * quantidadeEscolhida).toFixed(2).replace(".", ",")}`;
+    });
+
+    decrementar.addEventListener("click", () => {
+      if (quantidadeEscolhida > 1) {
+        quantidadeEscolhida--;
+        quantidade.textContent = quantidadeEscolhida;
+        valorTotal.textContent = `R$ ${(jogoPreco * quantidadeEscolhida).toFixed(2).replace(".", ",")}`;
       }
+    });
+
+    valorTotal.textContent = `R$ ${jogoPreco.toFixed(2).replace(".", ",")}`;
+  }
+
+
+  document.addEventListener("DOMContentLoaded", function() {
+  const botaoComprar = document.getElementById("botao-comprar");
+
+  botaoComprar.addEventListener("click", function() {
+    Swal.fire({
+      icon: 'success',
+      title: 'Sucesso!',
+      text: 'O jogo foi Comprado com sucesso! Obrigado pela preferência.',
+      showConfirmButton: false,
+      timer: 1500
+    }).then(() => {
+      window.location.href = "carrinho.html";
+    });
+  });
+});
     </script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   </body>
 </html>
